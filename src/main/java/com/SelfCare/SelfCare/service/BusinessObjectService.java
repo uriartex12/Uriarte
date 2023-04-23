@@ -102,7 +102,6 @@ public class BusinessObjectService implements BusinessObjectServiceI{
 						.amount((BigDecimal)item[j++])
 						.name(item[j++].toString())
 						.totalmoney((BigDecimal) item[j++])
-						.create((Date)item[j++])
 						.build();
 				listDTO.add(object);
 			}
