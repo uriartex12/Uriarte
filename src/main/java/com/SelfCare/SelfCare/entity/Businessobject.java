@@ -36,9 +36,12 @@ public class Businessobject {
 	private BigDecimal amount;
 	private String name;
 	private BigDecimal totalmoney;
-	@Column(name="created_at",columnDefinition = "timestamp")	
+	@Column(name="create",columnDefinition = "timestamp")	
 	private Date create;
-	@Column(name="update_at",columnDefinition = "timestamp")	
-	private Date update;
+	
+	public Businessobject() {
+		
+	}
+	
 
 }
