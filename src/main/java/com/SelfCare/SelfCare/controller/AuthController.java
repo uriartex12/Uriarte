@@ -34,6 +34,18 @@ public class AuthController {
 		 this.userService=userService;
 	 }
 	 
+	 
+	 @PostMapping("/login")
+	  public ResponseEntity<?> singIn(@RequestBody User params) throws Exception{
+		 
+		  try {
+			  User user= userService.singIn(params);		 			  
+			  return new ResponseEntity<>(user, HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(new HashMap() {{ put("error",e.getMessage()); } }, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		 
+	 }
 
 	  @PostMapping("/oauth2/save")
 	  public ResponseEntity<?> save(@RequestBody User params) throws Exception {

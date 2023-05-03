@@ -24,5 +24,10 @@ public class User {
 	private String token;
 	private String password;
 	private String email;
+	private Integer status;
 	
+	
+	public User() {
+		
+	}
 }
